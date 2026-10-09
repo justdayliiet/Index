@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>HealthyFit | Inicio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* ==================================================
+           CONFIGURACIÓN GENERAL
+        ================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #FEFFFA;
+            color: #0F172A;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+        }
+
+
+        /* ==================================================
+           HEADER
+        ================================================== */
+
+        header {
+            width: 100%;
+            height: 92px;
+            background: #0F172A;
+        }
+
+        .header-container {
+            width: 80%;
+            max-width: 1150px;
+            height: 100%;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        nav {
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ffffff;
+
+            font-size: 9px;
+            font-weight: 500;
+
+            padding: 0 13px;
+
+            height: 18px;
+
+            display: flex;
+            align-items: center;
+
+            border-right: 1px solid rgba(255,255,255,0.45);
+        }
+
+        nav a:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        nav a:first-child {
+            color: #CEEA2F;
+        }
+
+        nav a:hover {
+            color: #CEEA2F;
+        }
+
+
+        /* ==================================================
+           HERO
+        ================================================== */
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 890px;
+            overflow: hidden;
+            color: white;
+        }
+
+        .hero-imagen {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.55);
+
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: absolute;
+            z-index: 3;
+
+            bottom: 110px;
+
+            width: 80%;
+            max-width: 1150px;
+
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .hero h1 {
+            max-width: 900px;
+
+            font-size: 50px;
+            line-height: 1.15;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            margin: 0 0 20px 0;
+        }
+
+        .hero h1 span {
+            color: #CEEA2F;
+        }
+
+        .hero p {
+            max-width: 560px;
+
+            font-size: 14px;
+            line-height: 1.7;
+
+            margin: 0 0 32px 0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            min-width: 230px;
+            min-height: 50px;
+
+            padding: 14px 28px;
+
+            border-radius: 7px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 8px 18px rgba(0, 0, 0, 0.22);
+        }
+
+        .hero-btn-green {
+            background: #CEEA2F;
+            color: #0F172A;
+        }
+
+        .hero-btn-green:hover {
+            background: #ECFF82;
+        }
+
+        .hero-btn-white {
+            background: transparent;
+            color: white;
+
+            border: 1px solid white;
+        }
+
+        .hero-btn-white:hover {
+            background: white;
+            color: #0F172A;
+        }
+
+
+        /* ==================================================
+           SERVICIOS
+        ================================================== */
+
+        .servicios {
+            width: 100%;
+            height: 775px;
+
+            background: #FEFFFA;
+
+            padding-top: 78px;
+        }
+
+        .servicios-container {
+            width: 80%;
+            max-width: 1150px;
+
+            margin: 0 auto;
+        }
+
+        .servicios h2 {
+            margin: 0 0 17px 0;
+
+            font-size: 29px;
+            line-height: 1.2;
+
+            font-weight: 800;
+
+            color: #111111;
+
+            text-transform: uppercase;
+        }
+
+        .servicios-descripcion {
+            width: 850px;
+
+            margin: 0;
+
+            color: #202020;
+
+            font-size: 13px;
+            line-height: 1.45;
+
+            font-weight: 400;
+        }
+
+        .servicios-grid {
+            width: 100%;
+
+            margin-top: 58px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .servicio-card {
+            height: 380px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 16px;
+
+            background: #111827;
+
+            box-shadow:
+                0 7px 14px rgba(0,0,0,0.18);
+        }
+
+        .servicio-card img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.5s ease,
+                filter 0.5s ease;
+        }
+
+        .servicio-card:hover img {
+            transform: scale(1.03);
+            filter: blur(4px);
+        }
+
+        .servicio-card::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 48%;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,0.75)
+            );
+
+            z-index: 1;
+        }
+
+        /* ==================================================
+           DESCRIPCIÓN AL PASAR EL MOUSE
+        ================================================== */
+
+        .servicio-hover {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(15,23,42,0.60);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px;
+
+            opacity: 0;
+
+            z-index: 2;
+
+            transition: opacity 0.4s ease;
+        }
+
+        .servicio-hover p {
+            max-width: 270px;
+
+            margin: 0;
+
+            color: #ffffff;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+            text-align: center;
+
+            opacity: 0;
+
+            transform: translateY(15px);
+
+            transition:
+                opacity 0.4s ease,
+                transform 0.4s ease;
+        }
+
+        .servicio-card:hover .servicio-hover {
+            opacity: 1;
+        }
+
+        .servicio-card:hover .servicio-hover p {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+        .servicio-title {
+            position: absolute;
+
+            left: 18px;
+            bottom: 23px;
+
+            z-index: 3;
+
+            color: #ffffff;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            transition: color 0.4s ease;
+        }
+
+        .servicio-card:hover .servicio-title {
+            color: #CEEA2F;
+        }
+
+        .plus {
+            position: absolute;
+
+            right: 16px;
+            bottom: 14px;
+
+            z-index: 4;
+
+            width: 35px;
+            height: 35px;
+
+            border: 2px solid #ffffff;
+
+            border-radius: 50%;
+
+            color: #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+            font-weight: 300;
+
+            transition:
+                transform 0.4s ease,
+                color 0.4s ease,
+                border-color 0.4s ease;
+        }
+
+        .servicio-card:hover .plus {
+            color: #CEEA2F;
+
+            border-color: #CEEA2F;
+
+            transform: rotate(45deg);
+        }
+
+
+        /* ==================================================
+           RESULTADOS
+        ================================================== */
+
+        .testimonios {
+            width: 100%;
+            height: 795px;
+
+            background: #0F172A;
+
+            color: #ffffff;
+
+            position: relative;
+        }
+
+        .resultados-container {
+            width: 80%;
+            max-width: 1150px;
+
+            height: 100%;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: 34% 66%;
+
+            align-items: center;
+        }
+
+        .resultados-text {
+            padding-top: 5px;
+        }
+
+        .resultados-text h2 {
+            width: 300px;
+
+            margin: 0 0 20px 0;
+
+            font-size: 28px;
+            line-height: 1.15;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+        }
+
+        .lime {
+            color: #CEEA2F;
+        }
+
+        .resultados-text p {
+            width: 245px;
+
+            margin: 0 0 27px 0;
+
+            color: #ffffff;
+
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+
+        /* BOTÓN CONOCE MÁS */
+
+        .resultados-btn {
+            width: 205px;
+            height: 40px;
+
+            border-radius: 7px;
+
+            background: #CEEA2F;
+
+            color: #0F172A;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .resultados-btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ==================================================
+           ÁREA DEL CARRUSEL DE VIDEOS
+        ================================================== */
+
+        .video-area {
+            height: 100%;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: visible;
+        }
+
+
+        /* CONTENEDOR */
+
+        .testimonial-carousel {
+            position: relative;
+
+            width: 700px;
+            height: 500px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* CONTENEDOR DE VIDEOS */
+
+        .videos-container {
+            position: relative;
+
+            width: 600px;
+            height: 500px;
+
+            z-index: 2;
+        }
+
+
+        /* ==================================================
+           VIDEOS
+        ================================================== */
+
+        .video-box {
+            position: absolute;
+
+            top: 50%;
+
+            background: #000000;
+
+            border-radius: 17px;
+
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.45);
+
+            transition:
+                width 0.65s ease,
+                height 0.65s ease,
+                left 0.65s ease,
+                right 0.65s ease,
+                transform 0.65s ease,
+                opacity 0.65s ease,
+                box-shadow 0.65s ease;
+
+            will-change: transform, width, height;
+        }
+
+
+        /* VIDEO QUE ESTÁ A LA IZQUIERDA */
+
+        .video-box.position-left {
+
+            width: 175px;
+            height: 330px;
+
+            left: 0;
+            right: auto;
+
+            transform:
+                translateY(-50%)
+                rotateY(8deg)
+                scale(1);
+
+            z-index: 1;
+
+            opacity: 1;
+        }
+
+
+        /* VIDEO PROTAGONISTA */
+
+        .video-box.position-active {
+
+            width: 250px;
+            height: 390px;
+
+            left: 50%;
+            right: auto;
+
+            transform:
+                translate(-50%, -50%)
+                rotateY(0deg)
+                scale(1);
+
+            z-index: 3;
+
+            opacity: 1;
+
+            box-shadow:
+                0 18px 40px rgba(0,0,0,0.55);
+        }
+
+
+        /* VIDEO QUE ESTÁ A LA DERECHA */
+
+        .video-box.position-right {
+
+            width: 175px;
+            height: 330px;
+
+            left: auto;
+            right: 0;
+
+            transform:
+                translateY(-50%)
+                rotateY(-8deg)
+                scale(1);
+
+            z-index: 1;
+
+            opacity: 1;
+        }
+
+
+        /* ==================================================
+           CAPA OSCURA DE LOS VIDEOS TRASEROS
+        ================================================== */
+
+        .video-overlay {
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0,0,0,0.58);
+
+            z-index: 2;
+
+            pointer-events: none;
+
+            transition:
+                opacity 0.65s ease;
+        }
+
+
+        /* EL VIDEO PROTAGONISTA NO TIENE CAPA OSCURA */
+
+        .position-active .video-overlay {
+
+            opacity: 0;
+        }
+
+
+        /* ==================================================
+           VIDEOS
+        ================================================== */
+
+        .video-box video {
+
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+
+        /* ==================================================
+           FLECHAS
+        ================================================== */
+
+        .carousel-arrow {
+
+            position: absolute;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 42px;
+            height: 42px;
+
+            border: 1px solid rgba(255,255,255,0.65);
+
+            border-radius: 50%;
+
+            background: rgba(15,23,42,0.75);
+
+            color: #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 28px;
+            font-weight: 300;
+
+            line-height: 1;
+
+            cursor: pointer;
+
+            z-index: 10;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .carousel-arrow:hover {
+
+            background: #CEEA2F;
+
+            color: #0F172A;
+
+            border-color: #CEEA2F;
+
+            transform:
+                translateY(-50%)
+                scale(1.08);
+        }
+
+
+        /* FLECHA IZQUIERDA */
+
+        .arrow-left {
+
+            left: -8px;
+        }
+
+
+        /* FLECHA DERECHA */
+
+        .arrow-right {
+
+            right: -8px;
+        }
+
+
+        /* ==================================================
+           INDICADORES
+        ================================================== */
+
+        .carousel-dots {
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 35px;
+
+            transform: translateX(-50%);
+
+            display: flex;
+
+            gap: 8px;
+
+            z-index: 10;
+        }
+
+        .dot {
+
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.35);
+
+            transition:
+                width 0.3s ease,
+                background 0.3s ease;
+        }
+
+        .dot.active {
+
+            width: 22px;
+
+            border-radius: 10px;
+
+            background: #CEEA2F;
+        }
+
+
+        /* ==================================================
+           CONTACTO
+        ================================================== */
+
+        .contacto {
+            width: 100%;
+            height: 420px;
+
+            background: #FEFFFA;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .contacto-container {
+
+            width: 80%;
+            max-width: 1150px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: 40% 60%;
+
+            align-items: center;
+
+            gap: 35px;
+        }
+
+        .contacto-info h2 {
+            margin: 0 0 27px 0;
+
+            font-size: 28px;
+            line-height: 1.1;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            color: #111111;
+        }
+
+        .contacto-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            margin-bottom: 15px;
+
+            font-size: 15px;
+
+            color: #111111;
+        }
+
+        .contacto-icon {
+            width: 32px;
+            height: 32px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+        }
+
+        .contacto-icon img {
+            width: 32px;
+            height: 32px;
+
+            object-fit: contain;
+        }
+
+        .ubicacion-icon {
+            border-radius: 50%;
+        }
+
+        .contacto-card {
+            width: 100%;
+            min-height: 190px;
+
+            padding: 30px;
+
+            background: #ffffff;
+
+            border-radius: 17px;
+
+            box-shadow:
+                0 3px 13px rgba(0,0,0,0.18);
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .contacto-card p {
+            width: 90%;
+
+            margin: 0 0 22px 0;
+
+            font-size: 13px;
+            line-height: 1.45;
+
+            color: #151515;
+        }
+
+        .contacto-btn {
+            width: 420px;
+            height: 43px;
+
+            border-radius: 6px;
+
+            background: #CEEA2F;
+
+            color: #0F172A;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .contacto-btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ==================================================
+           FOOTER
+        ================================================== */
+
+        footer {
+            width: 100%;
+            height: 285px;
+
+            background: #0F172A;
+
+            color: #ffffff;
+        }
+
+        .footer-container {
+            width: 80%;
+            max-width: 1150px;
+
+            height: 100%;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                25%
+                28%
+                25%
+                22%;
+
+            align-items: start;
+
+            padding-top: 53px;
+        }
+
+        .footer-logo img {
+            width: 180px;
+        }
+
+        .footer-title {
+            margin: 4px 0 16px 0;
+
+            color: #ffffff;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+
+            gap: 5px;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+
+            font-size: 10px;
+
+            text-decoration: underline;
+        }
+
+        .footer-links a:hover {
+            color: #CEEA2F;
+        }
+
+        .social-title {
+            text-align: left;
+        }
+
+        .sociales {
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+        }
+
+        .sociales img {
+            width: 32px;
+            height: 32px;
+
+            object-fit: contain;
+        }
+
+
+        /* ==================================================
+           BOTÓN FLOTANTE WHATSAPP
+        ================================================== */
+
+        .boton-flotante {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 225px;
+            height: 58px;
+
+            display: flex;
+            align-items: center;
+
+            background: #ffffff;
+
+            border: 3px solid #58c56b;
+
+            border-radius: 40px;
+
+            text-decoration: none;
+
+            box-sizing: border-box;
+
+            z-index: 9999;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .boton-flotante span {
+            color: #111111;
+
+            font-family: 'Montserrat', Arial, sans-serif;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            margin-left: 22px;
+
+            letter-spacing: 0.2px;
+        }
+
+        .boton-flotante img {
+            position: absolute;
+
+            right: -3px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 68px;
+            height: 68px;
+
+            padding: 0px;
+
+            background: #58c56b;
+
+            border: 4px solid #58c56b;
+
+            border-radius: 50%;
+
+            object-fit: contain;
+
+            box-sizing: border-box;
+        }
+
+        .boton-flotante:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 6px 18px rgba(0, 0, 0, 0.18);
+        }
+
+        .boton-flotante:hover img {
+            background: #4caf60;
+        }
+
+
+        /* ==================================================
+           VERSIÓN MÓVIL DEL BOTÓN
+        ================================================== */
+
+        @media (max-width: 600px) {
+
+            .boton-flotante {
+                right: 15px;
+                bottom: 15px;
+
+                width: 190px;
+                height: 52px;
+            }
+
+            .boton-flotante span {
+                font-size: 13px;
+
+                margin-left: 18px;
+            }
+
+            .boton-flotante img {
+                width: 62px;
+                height: 62px;
+
+                padding: 13px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         HEADER
+    ================================================== -->
+
+    <header>
+
+        <div class="header-container">
+
+            <a href="#" class="logo">
+
+                <img src="logo.png"
+                     alt="HealthyFit"
+                     width="626"
+                     height="230">
+
+            </a>
+
+
+            <nav>
+
+                <a href="#">INICIO</a>
+
+                <a href="#nosotros">NOSOTROS</a>
+
+                <a href="#membresias">MEMBRESÍAS</a>
+
+                <a href="#clases">CLASES ▼</a>
+
+                <a href="#entrenamiento">
+                    ENTRENAMIENTO PERSONALIZADO ▼
+                </a>
+
+                <a href="#bienestar">
+                    BIENESTAR ▼
+                </a>
+
+                <a href="#contacto">
+                    CONTÁCTANOS
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================================
+         HERO
+    ================================================== -->
+
+    <section class="hero">
+
+        <img class="hero-imagen"
+             src="hero-referencia.png"
+             alt="HealthyFit">
+
+
+        <div class="hero-overlay"></div>
+
+
+        <div class="hero-content">
+
+
+            <h1>
+
+                MAXIMIZA TU
+                <span>TIEMPO</span>
+
+                <br>
+
+                TRANSFORMA TU RENDIMIENTO
+
+            </h1>
+
+
+            <p>
+
+                El centro de entrenamiento y bienestar exclusivo
+                para mentes ocupadas. Resultados reales en sesiones
+                efectivas de 45 minutos.
+
+                <br>
+
+                Cero aglomeraciones.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <a href="#contacto"
+                   class="hero-btn hero-btn-green">
+
+                    AGENDAR EVALUACIÓN
+
+                </a>
+
+
+                <a href="#membresias"
+                   class="hero-btn hero-btn-white">
+
+                    VER MEMBRESÍAS
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         SERVICIOS
+    ================================================== -->
+
+    <section class="servicios"
+             id="servicios">
+
+
+        <div class="servicios-container">
+
+
+            <h2>
+
+                DISEÑADO PARA TU ESTILO DE VIDA
+
+            </h2>
+
+
+            <p class="servicios-descripcion">
+
+                Entrenamientos eficientes, rutinas seguras y nutrición
+                realista. Todo lo que tu cuerpo necesita para rendir al
+                máximo, estructurado para encajar perfectamente en tu agenda.
+
+            </p>
+
+
+            <div class="servicios-grid">
+
+
+                <!-- CARD 1 -->
+
+                <article class="servicio-card"
+                         id="clases">
+
+
+                    <img src="clases.png"
+                         alt="Clases y Movimiento">
+
+
+                    <div class="servicio-hover">
+
+                        <p>
+
+                            Entrenamientos eficientes diseñados para adaptarse
+                            a tu ritmo y potenciar tu rendimiento.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="servicio-title">
+
+                        Clases y Movimiento
+
+                    </div>
+
+
+                    <div class="plus">
+
+                        +
+
+                    </div>
+
+
+                </article>
+
+
+                <!-- CARD 2 -->
+
+                <article class="servicio-card"
+                         id="entrenamiento">
+
+
+                    <img src="entrenamiento.png"
+                         alt="Entrenamiento Personalizado">
+
+
+                    <div class="servicio-hover">
+
+                        <p>
+
+                            Planes adaptados a tus objetivos, condición física
+                            y disponibilidad.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="servicio-title">
+
+                        Entrenamiento Personalizado
+
+                    </div>
+
+
+                    <div class="plus">
+
+                        +
+
+                    </div>
+
+
+                </article>
+
+
+                <!-- CARD 3 -->
+
+                <article class="servicio-card"
+                         id="bienestar">
+
+
+                    <img src="bienestar.png"
+                         alt="Bienestar Integral">
+
+
+                    <div class="servicio-hover">
+
+                        <p>
+
+                            Nutrición y bienestar para complementar tu
+                            entrenamiento y mejorar tu rendimiento.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="servicio-title">
+
+                        Bienestar Integral
+
+                    </div>
+
+
+                    <div class="plus">
+
+                        +
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         RESULTADOS
+    ================================================== -->
+
+    <section class="testimonios"
+             id="membresias">
+
+
+        <div class="resultados-container">
+
+
+            <div class="resultados-text">
+
+
+                <h2>
+
+                    <span class="lime">
+                        RESULTADOS
+                    </span>
+
+                    EN
+
+                    <br>
+
+                    EL MUNDO
+
+                    <span class="lime">
+                        REAL
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    No creas en nuestras palabras,
+                    cree en los resultados de
+                    quienes ya entrenan con nosotros.
+
+                </p>
+
+
+                <a href="#entrenamiento"
+                   class="resultados-btn">
+
+                    CONOCE MÁS
+
+                </a>
+
+
+            </div>
+
+
+            <!-- ==================================================
+                 CARRUSEL DE TESTIMONIOS
+            ================================================== -->
+
+            <div class="video-area">
+
+
+                <div class="testimonial-carousel">
+
+
+                    <!-- FLECHA IZQUIERDA -->
+
+                    <button class="carousel-arrow arrow-left"
+                            id="prevVideo"
+                            type="button"
+                            aria-label="Video anterior">
+
+                        ‹
+
+                    </button>
+
+
+                    <!-- VIDEOS -->
+
+                    <div class="videos-container">
+
+
+                        <!-- VIDEO 1 -->
+
+                        <div class="video-box position-active">
+
+                            <div class="video-overlay"></div>
+
+                            <video controls>
+
+                                <source
+                                    src="testimonio1.mp4"
+                                    type="video/mp4">
+
+                                Tu navegador no puede reproducir este video.
+
+                            </video>
+
+                        </div>
+
+
+                        <!-- VIDEO 2 -->
+
+                        <div class="video-box position-left">
+
+                            <div class="video-overlay"></div>
+
+                            <video controls>
+
+                                <source
+                                    src="testimonio2.mp4"
+                                    type="video/mp4">
+
+                                Tu navegador no puede reproducir este video.
+
+                            </video>
+
+                        </div>
+
+
+                        <!-- VIDEO 3 -->
+
+                        <div class="video-box position-right">
+
+                            <div class="video-overlay"></div>
+
+                            <video controls>
+
+                                <source
+                                    src="testimonio3.mp4"
+                                    type="video/mp4">
+
+                                Tu navegador no puede reproducir este video.
+
+                            </video>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- FLECHA DERECHA -->
+
+                    <button class="carousel-arrow arrow-right"
+                            id="nextVideo"
+                            type="button"
+                            aria-label="Siguiente video">
+
+                        ›
+
+                    </button>
+
+
+                    <!-- INDICADORES -->
+
+                    <div class="carousel-dots">
+
+                        <span class="dot active"></span>
+
+                        <span class="dot"></span>
+
+                        <span class="dot"></span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         CONTACTO
+    ================================================== -->
+
+    <section class="contacto"
+             id="contacto">
+
+
+        <div class="contacto-container">
+
+
+            <div class="contacto-info">
+
+
+                <h2>
+
+                    DA EL PRIMER PASO
+
+                    <br>
+
+                    HACIA TU BIENESTAR
+
+                </h2>
+
+
+                <div class="contacto-item">
+
+
+                    <div class="contacto-icon">
+
+
+                        <img src="email.png"
+                             alt="Email">
+
+
+                    </div>
+
+
+                    <span>
+
+                        hola@healthyfit.com
+
+                    </span>
+
+
+                </div>
+
+
+                <div class="contacto-item">
+
+
+                    <div class="contacto-icon ubicacion-icon">
+
+
+                        <img src="sedes.png"
+                             alt="Sedes">
+
+
+                    </div>
+
+
+                    <strong>
+
+                        VER SEDES →
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="contacto-card">
+
+
+                <p>
+
+                    Déjanos tus datos y un asesor se comunicará contigo
+                    en menos de 2 horas para explicarte más sobre nosotros.
+
+                </p>
+
+
+                <a href="#"
+                   class="contacto-btn">
+
+                    SOLICITAR MÁS INFORMACIÓN
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+
+        <div class="footer-container">
+
+
+            <div class="footer-logo">
+
+
+                <img src="logo.png"
+                     alt="HealthyFit">
+
+
+            </div>
+
+
+            <div>
+
+
+                <h3 class="footer-title">
+
+                    POLÍTICAS Y CONSULTAS
+
+                </h3>
+
+
+                <div class="footer-links">
+
+
+                    <a href="#">
+                        Política de Privacidad
+                    </a>
+
+
+                    <a href="#">
+                        Términos y Condiciones
+                    </a>
+
+
+                    <a href="#">
+                        Preguntas frecuentes
+                    </a>
+
+
+                    <a href="#">
+                        Libro de Reclamación
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div>
+
+
+                <h3 class="footer-title">
+
+                    NOSOTROS
+
+                </h3>
+
+
+                <div class="footer-links">
+
+
+                    <a href="#">
+                        Nosotros
+                    </a>
+
+
+                    <a href="#">
+                        Membresía
+                    </a>
+
+
+                    <a href="#">
+                        Sedes
+                    </a>
+
+
+                    <a href="#">
+                        Clases
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div>
+
+
+                <h3 class="footer-title social-title">
+
+                    SÍGUENOS
+
+                </h3>
+
+
+                <div class="sociales">
+
+
+                    <a href="#">
+
+                        <img src="instagram.png"
+                             alt="Instagram">
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <img src="tiktok.png"
+                             alt="TikTok">
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <img src="facebook.png"
+                             alt="Facebook">
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================================================
+         BOTÓN FLOTANTE WHATSAPP
+    ================================================== -->
+
+    <a href="https://wa.me/51902278004?text=Hola%2C%20quiero%20más%20información"
+       class="boton-flotante"
+       target="_blank"
+       rel="noopener noreferrer">
+
+
+        <img src="whatsapp.png"
+             alt="WhatsApp">
+
+
+        <span>
+
+            CONTÁCTANOS
+
+        </span>
+
+
+    </a>
+
+
+    <!-- ==================================================
+         JAVASCRIPT DEL CARRUSEL DE TESTIMONIOS
+    ================================================== -->
+
+    <script>
+
+        const videos = document.querySelectorAll('.video-box');
+
+        const dots = document.querySelectorAll('.dot');
+
+        const nextButton = document.getElementById('nextVideo');
+
+        const prevButton = document.getElementById('prevVideo');
+
+
+        let activeIndex = 0;
+
+
+        function actualizarCarrusel() {
+
+            videos.forEach((video, index) => {
+
+                video.classList.remove(
+                    'position-left',
+                    'position-active',
+                    'position-right'
+                );
+
+
+                if (index === activeIndex) {
+
+                    video.classList.add('position-active');
+
+                }
+
+                else if (
+                    index ===
+                    (activeIndex - 1 + videos.length) % videos.length
+                ) {
+
+                    video.classList.add('position-left');
+
+                }
+
+                else {
+
+                    video.classList.add('position-right');
+
+                }
+
+            });
+
+
+            /* ACTUALIZAR PUNTOS */
+
+            dots.forEach((dot, index) => {
+
+                dot.classList.toggle(
+                    'active',
+                    index === activeIndex
+                );
+
+            });
+
+        }
+
+
+        /* ==================================================
+           SIGUIENTE VIDEO
+        ================================================== */
+
+        nextButton.addEventListener('click', function() {
+
+            activeIndex =
+                (activeIndex + 1) % videos.length;
+
+            actualizarCarrusel();
+
+        });
+
+
+        /* ==================================================
+           VIDEO ANTERIOR
+        ================================================== */
+
+        prevButton.addEventListener('click', function() {
+
+            activeIndex =
+                (activeIndex - 1 + videos.length)
+                % videos.length;
+
+            actualizarCarrusel();
+
+        });
+
+
+        /* ==================================================
+           ESTADO INICIAL
+        ================================================== */
+
+        actualizarCarrusel();
+
+    </script>
+
+
+</body>
+
+</html>
